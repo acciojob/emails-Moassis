@@ -43,17 +43,17 @@ public class Email {
                     eight = true;
                 if (newPassword.charAt(i) >= 'A' && newPassword.charAt(i) <= 'Z')
                     upper = true;
-                if (newPassword.charAt(i) >= 'a' && newPassword.charAt(i) <= 'z')
+                else if (newPassword.charAt(i) >= 'a' && newPassword.charAt(i) <= 'z')
                     lower = true;
-                if (Character.getNumericValue(newPassword.charAt(i)) >= 0)
+                else if (Character.getNumericValue(newPassword.charAt(i)) >= 0
+                        && Character.getNumericValue(newPassword.charAt(i)) <= 9)
                     digit = true;
-                if (newPassword.charAt(i) > 'Z')
+                else
                     special = true;
             }
 
             if (eight && upper && lower && digit && special) {
                 setPassword(newPassword);
-
             }
         }
     }
