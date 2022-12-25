@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Gmail extends Email {
 
-    int inboxCapacity = 5; // maximum number of mails inbox can store
+    int inboxCapacity = Integer.MAX_VALUE; // maximum number of mails inbox can store
     // Inbox: Stores mails. Each mail has date (Date), sender (String), message
     // (String). It is guaranteed that message is distinct for all mails.
     // Trash: Stores mails. Each mail has date (Date), sender (String), message
